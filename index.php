@@ -147,7 +147,7 @@ foreach(range(1, 4) as $p) {
     foreach($character_options["player_" . $p]["cards"] as $c) {
         if(isset($c["alt"])) {
             echo "- 1-2P \"" . $c["alt"]["name"] . "\" starting with \"" . $all_cards[$c["alt"]["link"][0]]["name"] . "\".\n";
-            echo "  3-4P \"" . $c["main"]["name"] . "\" starting with \"" . $all_cards[$c["main"]["link"][0]]["name"] . "\".\n";
+            echo "  3-4P \"" . $c["main"]["name"] . "\" (👥) starting with \"" . $all_cards[$c["main"]["link"][0]]["name"] . "\".\n";
         } else {
             echo "- \"" . $c["main"]["name"] . "\" starting with \"" . $all_cards[$c["main"]["link"][0]]["name"] . "\".\n";
         }
@@ -288,7 +288,7 @@ foreach($treasure_deck["cards"] as $k => $v) {
                 }
             }
             echo "\n";
-            echo "  3-4P " . $all_cards[$id]["name"] . " (";
+            echo "  3-4P " . $all_cards[$id]["name"] . " (👥";
             foreach($all_cards[$id]["tags"] as $t) {
                 if($t == "soul") echo "👻";
                 if($t == "oneuse") echo "🔂";
@@ -388,7 +388,7 @@ foreach($monster_deck["cards"] as $k => $v) {
                 }
             }
             echo "\n";
-            echo "  3-4P " . $all_cards[$id]["name"] . " (";
+            echo "  3-4P " . $all_cards[$id]["name"] . " (👥";
             foreach($all_cards[$id]["tags"] as $t) {
                 if($t == "epic_boss") echo "☠";
                 if($t == "normal_boss") echo "💀";
@@ -425,4 +425,5 @@ foreach($monster_deck["cards"] as $k => $v) {
 echo "\n\n=== Info ===\n";
 echo "This tool was created by Hana Nova, ©2023.\n";
 echo "The data behind the tool can be found at https://www.villadelfia.org/deckme/cards.json.";
+echo "Find the code on github at https://github.com/Villadelfia/four-souls-decker."
 ?>
